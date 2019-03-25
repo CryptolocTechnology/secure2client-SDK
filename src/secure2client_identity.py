@@ -25,7 +25,7 @@ class CreateCognitoTokenHandler:
                                                         self.username, self.password)
 
         except Exception as e:
-            err_msg = ("Error setting up cognito token handler: %s" % e.message)
+            err_msg = ("Error setting up cognito token handler with msg: %s" % e.message)
             return False, err_msg
 
         return True, cognito_token_handler
